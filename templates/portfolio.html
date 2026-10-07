@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Bright Portfolio</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+<link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+<link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+<!-- Fonts (external – NO CHANGE) -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+<!-- Main CSS File -->
+<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+
+  
+
+ 
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">Bright</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{{ url_for('home') }}#hero">Home</a></li>
+          <li><a href="{{ url_for('home') }}#about">About</a></li>
+          <li><a href="{{ url_for('home') }}#resume">Resume</a></li>
+          <li><a href="{{ url_for('services') }}">Services</a></li>
+          <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+         <li><a href="{{ url_for('home') }}#contact">Contact</a></li>
+
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#about">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+        <h1>Portfolio Details</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Portfolio Details</span>
+        <h2>Portfolio Overview</h2>
+        <p>This personal portfolio is a modern, responsive website created to present my skills, projects, and
+           services in a professional digital format. It combines clean UI design with backend functionality, allowing dynamic content management and user interaction.
+           The project reflects my ability to design, develop, and deploy complete web solutions.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-8">
+
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 4000
+                  },
+                  "slidesPerView": 1,
+                  "spaceBetween": 0,
+                  "effect": "fade",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                 <img src="{{ url_for('static', filename='img/portfolio/portfolio1.jpeg') }}"
+     class="img-fluid"
+     alt="">     
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{ url_for('static', filename='img/portfolio/portfolio3.jpeg') }}"
+     class="img-fluid"
+     alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{ url_for('static', filename='img/portfolio/portfolio4.jpeg') }}"
+     class="img-fluid"
+     alt="">
+                </div>
+
+                <div class="swiper-slide">
+                 <img src="{{ url_for('static', filename='img/portfolio/portfolio2.jpeg') }}"
+     class="img-fluid"
+     alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="portfolio-content" data-aos="fade-up" data-aos-delay="200">
+              <h2>Aigle Microfinance Web app</h2>
+
+              <div class="meta-info">
+                <span class="date"><i class="bi bi-calendar"></i> July 15, 2025</span>
+                <span class="category"><i class="bi bi-tag"></i> Web Development</span>
+                <span class="client"><i class="bi bi-building"></i> Churchboii Solutions</span>
+              </div>
+
+              <p>
+                A dynamic small webapp designed for the AigleMicrofinance Company
+              </p>
+
+              <h3>Project Overview</h3>
+         <p>The project was designed to help Tanzanian citizens to apply loan easily through 
+          the small web app of Aigle Microfinance
+          
+              </p>
+
+              <div class="highlights-box">
+                <h4>Key Highlights</h4>
+                <ul>
+                  <li><i class="bi bi-check-circle"></i> Responsive design across all devices</li>
+                  <li><i class="bi bi-check-circle"></i> Advanced user authentication system</li>
+                  <li><i class="bi bi-check-circle"></i> Real-time data synchronization</li>
+                  <li><i class="bi bi-check-circle"></i> Optimized performance and loading speed</li>
+                  <li><i class="bi bi-check-circle"></i> Comprehensive admin dashboard</li>
+                </ul>
+              </div>
+
+              <h3>Technical Implementation</h3>
+              <p>
+               This project was developed to understand full-stack web development using Flask. It includes frontend design, backend routing, database connectivity using MySQL, and user communication features such as email and WhatsApp integration.
+                <p>
+                   Guiding bright is one of the greatest things i have experienced because 
+                   he is a young passionate engineer who is growing in the CSE industry
+                </p>
+                <div class="author">
+                  
+                  <img src="{{ url_for('static', filename='img/portfolio/Engineer.jpeg') }}"
+     class="img-fluid rounded-circle"
+     style="width:95px;
+     height:95px;"
+     alt="Author">
+
+                  <div class="author-info">
+                    <h5>James Urio</h5>
+                    <span>Programming Coach</span>
+                  </div>
+                </div>
+              </blockquote>
+
+              <p>
+                Programming is one of the best things that a young man can do not only to 
+                incur a living but to get connected to new ideas that are being developed
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-4">
+
+            <div class="sidebar" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="info-card">
+                <h3>Project Details</h3>
+                <div class="info-item">
+                  <span class="label">Client</span>
+                  <span class="value">Aigle Microfinance</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Category</span>
+                  <span class="value">Web Development</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Date</span>
+                  <span class="value">June 15, 2025</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Duration</span>
+                  <span class="value">8 Weeks</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Technologies</span>
+                  <span class="value">HTML, Flask, Mysql</span>
+                </div>
+                <a href="https://aiglemicrofinance.netlify.app/" class="btn-primary" target="_blank">
+                  <i class="bi bi-box-arrow-up-right"></i> View Live Project
+                </a>
+              </div>
+
+              <div class="share-card" data-aos="fade-up" data-aos-delay="300">
+                <h3>Share This Project</h3>
+                <div class="social-links">
+                  <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="pinterest"><i class="bi bi-pinterest"></i></a>
+                </div>
+              </div>
+
+              <div class="tags-card" data-aos="fade-up" data-aos-delay="400">
+                <h3>Tags</h3>
+                <div class="tags">
+                  <a href="#">Design</a>
+                  <a href="#">Development</a>
+                  <a href="#">React</a>
+                  <a href="#">UX/UI</a>
+                  <a href="#">Frontend</a>
+                  <a href="#">Backend</a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Bright</span>
+          </a>
+          <p>I'm Bright a designated full stack developer with all passion to work in this field of 
+            Computer Science.I have all happiness and joy that am ready to be hired.
+            You are all welcome and am ready for hiring
+          </p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>My  Services</h4>
+          <ul>
+            <li><a href="#">Frontend design</a></li>
+            <li><a href="#">Backend design</a></li>
+            <li><a href="#">Web Management</a></li>
+            <li><a href="#">Full stack development</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact me </h4>
+          <p>PIN 144004</p>
+          <p>Jalandhar GT , Lovely professional University</p>
+          <p>India</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 7901835860</span></p>
+          <p><strong>Email:</strong> <span>brighmzoba@gmail.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© 2026 <span>Copyright</span> <strong class="px-1 sitename">Bright</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        
+        Designed by Bright
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+ <!-- Vendor JS Files -->
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/typed.js/typed.umd.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/waypoints/noframework.waypoints.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+
+<!-- Main JS File -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
